@@ -1,7 +1,7 @@
 # PatchWizard
 IntelliJ plugin for AdPlatform to ease patch upload 
 
-This plugin compiles & upload classes from selected changelist.
+This plugin compiles & upload **all** classes from the selected changelist
 
 - Configuration can be found at File->Settings->Tools
 
@@ -16,7 +16,9 @@ less +F /home/.IntelliJIdea2016.1/system/plugins-sandbox/system/log/idea.log
 ### TODO List
 
 - [x] Compile files before upload via scp 
-- [ ] Support multiple servers upload (comma seprated list in configuration)
+- [x] Create parent directories as needed 
+- [ ] Give upload permissions to destination directory (chmod -R 777 classes/)  
+- [ ] Support multiple servers upload (comma separated list in configuration)
 - [ ] Restart application server & notify when server is ready
 - [ ] Support .xml files
 
