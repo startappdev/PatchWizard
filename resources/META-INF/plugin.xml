@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+    <id>com.startapp.plugin.patch-wizard</id>
+    <name>Patch Wizard</name>
+    <version>1.1</version>
+    <vendor email="iddo.eldor@startapp.com" url="http://www.startapp.com">StartApp</vendor>
+
+    <description><![CDATA[
+      w.i.p.
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <em>init</em>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="141.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectConfigurable
+            id="preferences.DeployPatch"
+            groupId="tools"
+            displayName="PatchWizardPluginConfiguration"
+            instance="config.gui.PatchWizardConfigurable" />
+        <projectService serviceInterface="config.PatchWizardConfig" serviceImplementation="config.PatchWizardConfig" />
+    </extensions>
+
+    <actions>
+        <action id="PatchWizardAction" class="PatchWizardAction" text="Deploy to server">
+            <add-to-group group-id="CodeFormatGroup" anchor="after" relative-to-action="ReformatCode" />
+        </action>
+    </actions>
+
+    <!--
+    todo
+      <depends></depends>
+      http://www.jetbrains.org/intellij/sdk/docs/basics/plugin_structure/plugin_dependencies.html
+    -->
+
+</idea-plugin>
