@@ -33,10 +33,6 @@ import java.util.List;
  */
 public class PatchWizardAction extends AnAction {
 
-    /**
-     * Log are written to file idea.log, to view logs while debugging you need to run
-     * $: less +F /root/.IntelliJIdea2016.1/system/plugins-sandbox/system/log/idea.log
-     */
     private static final Logger LOG = Logger.getInstance("#PatchWizardAction");
 
     @Override
